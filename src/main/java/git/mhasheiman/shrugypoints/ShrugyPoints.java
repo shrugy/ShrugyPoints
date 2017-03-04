@@ -1,4 +1,4 @@
-package me.mhasheiman.shrugypoints;
+package git.mhasheiman.shrugypoints;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

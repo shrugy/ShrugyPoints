@@ -1,6 +1,6 @@
-package me.mhasheiman.shrugypoints.database;
+package git.mhasheiman.shrugypoints.database;
 
-import me.mhasheiman.shrugypoints.ShrugyPoints;
+import git.mhasheiman.shrugypoints.ShrugyPoints;
 
 /**
  * The database manager
