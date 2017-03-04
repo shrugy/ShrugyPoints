@@ -1,6 +1,6 @@
 name: ShrugyPoints
 version: ${project.version}
 authors: [MMDHashemian, mikroskeem]
-main: git.mhasheiman.shrugypoints.ShrugyPoints
+main: git.mmdhasheiman.shrugypoints.ShrugyPoints
 description: Great point economy system for Spigot (Minecraft)
 webpage: https://github.com/shrugy/ShrugyPoints
