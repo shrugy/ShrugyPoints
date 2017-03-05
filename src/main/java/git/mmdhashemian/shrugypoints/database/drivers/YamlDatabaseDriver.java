@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class YamlDatabaseDriver implements DatabaseDriver {
     private final ShrugyPoints plugin;
@@ -54,7 +55,12 @@ public class YamlDatabaseDriver implements DatabaseDriver {
 
     @Override
     public List<ShrugyPoint> getAllPoints() throws Exception {
-        return null;
+        return database.getKeys(false).stream()
+                .map(this::getSection)
+                .map(this::toShrugyPoint)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -84,9 +90,25 @@ public class YamlDatabaseDriver implements DatabaseDriver {
         return section;
     }
 
+    private ConfigurationSection getSection(String key){
+        return database.getConfigurationSection(key);
+    }
+
     private Optional<ShrugyPoint> toShrugyPoint(ConfigurationSection section){
         if(section == null) return Optional.empty();
-        /* TODO: Code */
-        return Optional.empty();
+        return Optional.of(new ShrugyPoint(
+                UUID.fromString(section.getName()),
+                section.getDouble("points"),
+                getHistoryFromSection(section.getConfigurationSection("history"))
+        ));
+    }
+
+    private List<ShrugyPoint.History> getHistoryFromSection(ConfigurationSection section){
+        return section.getKeys(false).stream()
+                .map(key -> new ShrugyPoint.History(
+                        section.getDouble("points"),
+                        Long.valueOf(section.getName()),
+                        UUID.fromString(section.getString("transferId"))
+                )).collect(Collectors.toList());
     }
 }
