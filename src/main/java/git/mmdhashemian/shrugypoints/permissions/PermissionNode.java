@@ -6,7 +6,7 @@ package git.mmdhashemian.shrugypoints.permissions;
  * @author Mohammad_Hashemian
  *
  */
-public enum PermissionNodes {
+public enum PermissionNode {
 	LOOK(".look"),
 	GIVE(".give"),
 	GIVEALL(".giveall"),
@@ -42,7 +42,7 @@ public enum PermissionNodes {
 	 * Private constructor
 	 * @param PermissionNode
 	 */
-	private PermissionNodes(String permnode) {
+	private PermissionNode(String permnode) {
 		this.permissionnode = prefix + permnode;
 	}
 	

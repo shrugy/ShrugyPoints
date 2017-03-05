@@ -18,7 +18,7 @@ public class PermissionHandler {
 	 * @param permissionnode
 	 * @return if player has permission return true else false.
 	 */
-	public boolean has(Player player, PermissionNodes permissionnode) {
+	public boolean has(Player player, PermissionNode permissionnode) {
 		if (player.isOp()) {
 			return true;
 		} else {
@@ -33,7 +33,7 @@ public class PermissionHandler {
 	 * @param permissionnode
 	 * @return if command sender has permission return true else false.
 	 */
-	public boolean has(CommandSender sender, PermissionNodes permissionnode) {
+	public boolean has(CommandSender sender, PermissionNode permissionnode) {
 		if (sender.isOp()) {
 			return true;
 		} else {
