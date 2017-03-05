@@ -40,7 +40,7 @@ public enum PermissionNode {
 	
 	/**
 	 * Private constructor
-	 * @param PermissionNode
+	 * @param permnode Permission node
 	 */
 	private PermissionNode(String permnode) {
 		this.permissionnode = prefix + permnode;
