@@ -30,7 +30,7 @@ public class PermissionHandler {
 	 * Check if the command sender has permission.
 	 * 
 	 * @param sender
-	 * @param node
+	 * @param permissionnode
 	 * @return if command sender has permission return true else false.
 	 */
 	public boolean has(CommandSender sender, PermissionNodes permissionnode) {
