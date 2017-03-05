@@ -29,7 +29,7 @@ public enum Locator {
 	}
 	
 	/**
-	 *  Get the locator
+	 * Get the locator
 	 * @return Locator
 	 */
 	public String getLocator() {
