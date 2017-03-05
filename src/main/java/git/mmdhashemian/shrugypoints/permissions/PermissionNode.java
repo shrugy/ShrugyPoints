@@ -36,7 +36,7 @@ public enum PermissionNode {
 	/**
 	 * Permission prefix
 	 */
-	private String prefix = "ShrugyPoints";
+	private String prefix = "shrugypoints";
 	
 	/**
 	 * Private constructor
