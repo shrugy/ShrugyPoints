@@ -6,5 +6,5 @@ package git.mmdhashemian.shrugypoints.storages;
 public enum StorageType {
     MYSQL,
     YAML,
-    SQLITE;
+    H2;
 }
