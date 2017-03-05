@@ -20,6 +20,7 @@ public enum PermissionNodes {
 	LEADERS(".leaders"),
 	RANK(".rank"),
 	ME(".me"),
+	HISTORY(".history"),
 	SOUNDPLAY(".soundplay"),
 	FIREWORKRECEIVE(".fireworkreceive"),
 	BROADCAST(".broadcast"),
