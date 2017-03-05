@@ -1,9 +1,10 @@
-package git.mmdhasheiman.shrugypoints.database;
+package git.mmdhashemian.shrugypoints.database;
 
-import git.mmdhasheiman.shrugypoints.ShrugyPoints;
+import git.mmdhashemian.shrugypoints.ShrugyPoints;
 
 /**
  * The database manager
+ * 
  * @author mark
  */
 public class DatabaseManager {
